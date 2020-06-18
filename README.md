@@ -2,6 +2,14 @@
 
 This is a simple helper script to transcribe audio files using AWS Transcribe. Converts file format, uploads to AWS, checks job status, and fetches result. 
 
+## Installation
+
+AWS Transcribe is not (yet) available on pypi. To install, clone this repo.
+Requires `ffmpeg` and the Python packages listed in `requirements.txt`. You will
+also need an AWS account. 
+
+## Usage
+
 ```
 usage: Transcribe audio via aws. If a job already exists, provides a status update.
        [-h] [-k KEY]
