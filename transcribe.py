@@ -81,7 +81,7 @@ def start_or_check_transcription_job(audio_file, bucket_name, audio_file_s3_key=
         log.debug("OK")
         log.info("Job {} status is {}".format(job_name, result['TranscriptionJobStatus']))
 
-if __name__ == '__main__':
+def main():
     parser = ArgumentParser("Transcribe audio via aws. If a job already exists, provides a status update.")
     parser.add_argument("audio_file", help="Audio file to transcribe")
     parser.add_argument("bucket", help="s3 bucket name")
@@ -111,3 +111,6 @@ if __name__ == '__main__':
         print_result=args.print_result,
         log=log
     )
+
+if __name__ == '__main__':
+    main()
